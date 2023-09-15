@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+    </ProgressBar>
+    <TextView
+        android:id="@+id/text_view_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We couldn't load the data"
+        android:gravity="center"
+        android:layout_margin="7dp"
+        android:textSize="18sp">
+    </TextView>
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="7dp"
+        android:text="Retry">
+    </Button>
+
+</LinearLayout>

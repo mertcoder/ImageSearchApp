@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.GalleryFragment"
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_unsplash_photo"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+    </ProgressBar>
+
+    <TextView
+        android:id="@+id/text_view_error"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_above="@+id/button_retry"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:text="Results could not be loaded."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:id="@+id/button_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+    </Button>
+    <TextView
+        android:id="@+id/text_view_empty"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No results for this query."
+        android:layout_centerInParent="true"
+        android:textSize="22sp">
+    </TextView>
+</RelativeLayout>
